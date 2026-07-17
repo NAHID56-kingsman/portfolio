@@ -36,7 +36,7 @@ export default function Sidebar({ activeSection }: SidebarProps) {
   ];
 
   return (
-    <aside id="sideNav" className="w-full lg:w-80 lg:h-screen lg:sticky lg:top-0 bg-sidebar border-b lg:border-b-0 lg:border-r border-border-main flex flex-col justify-between p-6 lg:p-8 shrink-0 transition-all duration-300">
+    <aside id="sideNav" className="w-full lg:w-80 lg:h-screen lg:sticky lg:top-0 lg:overflow-y-auto bg-sidebar border-b lg:border-b-0 lg:border-r border-border-main flex flex-col justify-between p-6 lg:p-8 shrink-0 transition-all duration-300">
       <div className="flex flex-col space-y-8">
         
         {/* Profile / Avatar Group */}
@@ -95,6 +95,20 @@ export default function Sidebar({ activeSection }: SidebarProps) {
               )}
             </button>
           </div>
+          
+          {/* GitHub Badge - Placed right after Mail */}
+          <a 
+            href={personalInfo.socials.github} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center justify-between group text-xs font-mono bg-card-bg hover:bg-card-hover hover:border-sky-500/30 hover:text-sky-400 py-1.5 px-2.5 rounded-lg border border-border-main transition-all duration-300"
+            title="GitHub Profile"
+          >
+            <div className="flex items-center truncate">
+              <Github className="w-3.5 h-3.5 text-text-dim group-hover:text-sky-400 mr-2 shrink-0 transition-colors duration-300" />
+              <span className="truncate">github.com/NAHID56-kingsman</span>
+            </div>
+          </a>
         </div>
 
         {/* Navigation - Hidden on mobile, visible on large screens */}
@@ -121,20 +135,8 @@ export default function Sidebar({ activeSection }: SidebarProps) {
         </nav>
       </div>
 
-      {/* Social / Contact Icons & Theme Toggle */}
-      <div className="flex flex-col space-y-4 pt-6 border-t border-border-main/60 lg:pt-6 mt-6 lg:mt-0 transition-colors duration-300">
-        <div className="flex items-center justify-center lg:justify-start space-x-3">
-          <a 
-            href={personalInfo.socials.github} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="flex items-center space-x-2 px-3 py-2 bg-card-bg hover:bg-pill hover:text-text-main border border-border-main hover:border-border-hover rounded-xl text-text-muted transition-all duration-300 shadow-sm"
-            title="GitHub Profile"
-          >
-            <Github className="w-4 h-4 shrink-0" />
-            <span className="text-xs font-mono">NAHID56-kingsman</span>
-          </a>
-        </div>
+      {/* Sidebar Footer */}
+      <div className="pt-6 border-t border-border-main/60 lg:pt-6 mt-6 lg:mt-0 transition-colors duration-300">
         <p className="text-[10px] text-text-dim text-center lg:text-left font-mono transition-colors duration-300">
           &copy; {new Date().getFullYear()} Nahid Asef
         </p>

@@ -6,7 +6,7 @@ import PublicationsSection from "./components/PublicationsSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ResumePDFView from "./components/ResumePDFView";
-import { Menu, X, ArrowUpCircle, Sun, Moon, FileText } from "lucide-react";
+import { Menu, X, ArrowUpCircle, Sun, Moon, FileText, Github } from "lucide-react";
 import { personalInfo } from "./data";
 
 export default function App() {
@@ -171,7 +171,16 @@ export default function App() {
                 );
               })}
             </nav>
-            <div className="pt-6 border-t border-border-main/80">
+            <div className="pt-6 border-t border-border-main/80 flex flex-col space-y-4">
+              <a 
+                href={personalInfo.socials.github} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center space-x-2 px-3 py-2 bg-card-bg hover:bg-pill text-text-muted hover:text-text-main border border-border-main rounded-xl text-xs font-mono transition-all duration-300"
+              >
+                <Github className="w-4 h-4 shrink-0 text-text-muted" />
+                <span>GitHub Profile</span>
+              </a>
               <p className="text-text-dim text-[10px] font-mono">
                 {personalInfo.email}
               </p>
@@ -194,6 +203,18 @@ export default function App() {
           </div>
           
           <div className="flex items-center space-x-3">
+            {/* GitHub Button */}
+            <a
+              href={personalInfo.socials.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-xl border font-medium text-xs bg-card-bg hover:bg-pill text-text-secondary border-border-main hover:border-border-hover shadow-sm transition-all duration-300"
+              title="GitHub Profile"
+            >
+              <Github className="w-3.5 h-3.5 text-text-muted" />
+              <span>GitHub</span>
+            </a>
+
             {/* View Resume PDF Trigger */}
             <button
               onClick={() => {
