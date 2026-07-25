@@ -4,6 +4,8 @@ export interface Project {
   bullets?: string[];
   tags: string[];
   category: "ML/AI" | "NLP" | "Web" | "Computer Vision" | "Analytics";
+  github?: string;
+  demo?: string;
 }
 
 export interface PublicationItem {
@@ -72,6 +74,8 @@ export const skillsData: SkillCategory[] = [
     skills: [
       "TensorFlow",
       "PyTorch",
+      "Hugging Face",
+      "DistilBERT",
       "Scikit-learn",
       "OpenCV",
       "Computer Vision",
@@ -101,6 +105,20 @@ export const skillsData: SkillCategory[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    title: "ToxiScan – Toxic Comment Classification",
+    description: "A production-ready multi-label toxic comment classification system powered by a fine-tuned DistilBERT transformer and served through FastAPI REST API.",
+    bullets: [
+      "Fine-tuned DistilBERT (distilbert-base-uncased) on ~160,000 Wikipedia comments from the Jigsaw dataset across 6 toxicity categories: Toxic, Severe Toxic, Obscene, Threat, Insult, and Identity Hate.",
+      "Achieved a Macro ROC-AUC of 0.99 and Weighted F1 of 0.80 using PyTorch, Hugging Face Transformers, and AdamW optimizer with FP16 mixed precision.",
+      "Built and served real-time multi-label toxicity inference API endpoints using FastAPI with automated Uvicorn server and interactive Swagger documentation.",
+      "Deployed an interactive web interface on Netlify for real-time toxicity analysis and multi-label probability scoring."
+    ],
+    tags: ["Python", "PyTorch", "Hugging Face", "DistilBERT", "NLP", "FastAPI", "Uvicorn", "Netlify"],
+    category: "NLP",
+    github: "https://github.com/NAHID56-kingsman/ToxiScan---Toxic-Comment-Classification",
+    demo: "https://toxiscann.netlify.app/"
+  },
   {
     title: "ClinIntel AI – Hybrid Clinical Decision Support for Readmission Prediction",
     description: "Built an end-to-end clinical systems suite. Predicts 30-day hospital readmission risk from patient encounter data and performs entities extraction from raw unstructured clinical reports.",
