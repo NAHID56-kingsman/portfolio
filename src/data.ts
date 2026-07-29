@@ -49,9 +49,10 @@ export const personalInfo = {
 export const education: EducationItem[] = [
   {
     institution: "Ahsanullah University of Science and Technology (AUST)",
-    degree: "Bachelor of Science (BSc) in Computer Science and Engineering",
-    info: "Focus on Machine Learning, NLP, Computer Vision & Data Analytics",
-    period: "Expected Graduation: 2026"
+    degree: "Bachelor of Science (BSc)",
+    info: "Computer Science and Engineering",
+    period: "Expected Graduation: 2026",
+    gpa: "3.24 / 4.00"
   }
 ];
 
@@ -106,51 +107,50 @@ export const skillsData: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
-    title: "ToxiScan – Toxic Comment Classification",
-    description: "A production-ready multi-label toxic comment classification system powered by a fine-tuned DistilBERT transformer and served through FastAPI REST API.",
+    title: "ToxiScan – Transformer-Based Toxic Comment Classification",
+    description: "An AI-powered content moderation system that automatically detects toxic, abusive, and threatening language in user comments across 6 toxicity categories, enabling real-time flagging without manual review.",
     bullets: [
-      "Fine-tuned DistilBERT (distilbert-base-uncased) on ~160,000 Wikipedia comments from the Jigsaw dataset across 6 toxicity categories: Toxic, Severe Toxic, Obscene, Threat, Insult, and Identity Hate.",
-      "Achieved a Macro ROC-AUC of 0.99 and Weighted F1 of 0.80 using PyTorch, Hugging Face Transformers, and AdamW optimizer with FP16 mixed precision.",
-      "Built and served real-time multi-label toxicity inference API endpoints using FastAPI with automated Uvicorn server and interactive Swagger documentation.",
-      "Deployed an interactive web interface on Netlify for real-time toxicity analysis and multi-label probability scoring."
+      "Built an AI-powered content moderation system that automatically detects toxic, abusive, and threatening language in user comments across 6 toxicity categories, enabling real-time flagging without manual review",
+      "Fine-tuned a DistilBERT transformer for multi-label classification on 159K+ real-world comments, replacing the pretrained LM head with a sigmoid layer optimized via BCE loss to handle overlapping labels",
+      "Designed a multi-label stratified data pipeline and custom text-cleaning logic to address severe class imbalance (90% non-toxic) while preserving semantic content needed for accurate detection",
+      "Achieved 0.80 weighted F1 and 0.99 ROC-AUC on held-out data, and deployed the model as a FastAPI service with real-time single/batch inference and API-key authentication"
     ],
-    tags: ["Python", "PyTorch", "Hugging Face", "DistilBERT", "NLP", "FastAPI", "Uvicorn", "Netlify"],
+    tags: ["Python", "PyTorch", "Hugging Face Transformers", "FastAPI", "Scikit-learn"],
     category: "NLP",
     github: "https://github.com/NAHID56-kingsman/ToxiScan---Toxic-Comment-Classification",
     demo: "https://toxiscann.netlify.app/"
   },
   {
     title: "ClinIntel AI – Hybrid Clinical Decision Support for Readmission Prediction",
-    description: "Built an end-to-end clinical systems suite. Predicts 30-day hospital readmission risk from patient encounter data and performs entities extraction from raw unstructured clinical reports.",
+    description: "An end-to-end clinical support system predicting 30-day hospital readmission risk from patient encounter data and extracting clinical entities from unstructured notes.",
     bullets: [
-      "Trained on the UCI/Kaggle 'Diabetes 130-US Hospitals' dataset using CatBoost, explained with SHAP for interpretability and clinician confidence.",
-      "Developed an NLP pipeline to extract clinical entities (symptoms, diagnoses, medications, allergies) from free-text clinical notes, including negation and discontinuation detection.",
-      "Exposed risk scoring, note extraction, and combined recommendation outputs through a high-throughput FastAPI service, and built a Streamlit dashboard for clinician-facing use.",
-      "Containerized the full stack with Docker/docker-compose (API + Postgres) and set up a CI pipeline with a pytest suite covering preprocessing, NLP, and API logic."
+      "Built an end-to-end system that predicts 30-day hospital readmission risk from patient encounter data, trained on the UCI/Kaggle \"Diabetes 130-US Hospitals\" dataset using CatBoost and explained with SHAP for interpretability",
+      "Developed an NLP pipeline to extract clinical entities (symptoms, diagnoses, medications, allergies) from free-text clinical notes, including negation and discontinuation detection",
+      "Exposed risk scoring, note extraction, and combined recommendation outputs through a FastAPI service, and built a Streamlit dashboard for clinician-facing use",
+      "Containerized the full stack with Docker/docker-compose (API + Postgres) and set up a CI pipeline with a pytest suite covering preprocessing, NLP, and API logic"
     ],
-    tags: ["Python", "CatBoost", "SHAP", "FastAPI", "Streamlit", "Docker", "spaCy", "PostgreSQL", "CI/CD"],
+    tags: ["Python", "CatBoost", "SHAP", "FastAPI", "Streamlit", "Docker", "spaCy"],
     category: "ML/AI"
   },
   {
     title: "Heritage Building Defect Detection",
-    description: "Developed a CNN-based deep learning defect classification system to identify, evaluate, and categorize structural abnormalities in heritage properties.",
+    description: "Developed a CNN-based defect classification system for 7 heritage building defect categories using transfer learning models.",
     bullets: [
-      "Classified defects into 7 distinct heritage building defect categories using transfer learning models.",
-      "Implemented and benchmarked five pretrained architectures, including EfficientNet-B0 and ResNet-18.",
-      "Achieved a high test accuracy of 93.46% with EfficientNet-B0."
+      "Developed a CNN-based defect classification system for 7 heritage building defect categories using transfer learning",
+      "Implemented and compared five pretrained architectures, including EfficientNet-B0 and ResNet-18",
+      "Achieved 93.46% test accuracy with EfficientNet-B0"
     ],
-    tags: ["Python", "PyTorch", "Transfer Learning", "Scikit-learn", "EfficientNet", "ResNet-18"],
+    tags: ["Python", "PyTorch", "Transfer Learning", "Scikit-learn"],
     category: "Computer Vision"
   },
   {
     title: "Bangladeshi Taka Note Detection",
-    description: "Trained and deployed a high-performance computer vision model for automated real-time recognition of currency notes under diverse conditions.",
+    description: "Trained a YOLOv11 object detection model to identify and classify Bangladeshi currency notes from images with real-time performance.",
     bullets: [
-      "Trained a YOLOv11 object detection model to identify and classify Bangladeshi currency notes from images.",
-      "Prepared, curated, and annotated a custom image dataset for model training and cross-validation.",
-      "Achieved real-time inference detection speeds using the state-of-the-art YOLOv11 framework."
+      "Trained a YOLOv11 object detection model to identify and classify Bangladeshi currency notes from images, including preparing and annotating a custom image dataset",
+      "Achieved real-time detection performance using the YOLOv11 object detection framework"
     ],
-    tags: ["Python", "YOLOv11", "Computer Vision", "Object Detection", "Dataset Annotation"],
+    tags: ["Python", "YOLOv11", "Computer Vision"],
     category: "Computer Vision"
   }
 ];

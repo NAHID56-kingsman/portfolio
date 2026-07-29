@@ -1,4 +1,4 @@
-import { Mail, Phone, Github, MapPin, Printer, ExternalLink, FileText } from "lucide-react";
+import { Mail, Phone, Github, MapPin, Printer, FileText } from "lucide-react";
 import { personalInfo, education, projects, publications, skillsData } from "../data";
 
 interface ResumePDFViewProps {
@@ -166,24 +166,12 @@ export default function ResumePDFView({ onClose }: ResumePDFViewProps) {
           </h2>
           {publications.map((pub, idx) => (
             <div key={idx} className="space-y-1">
-              <div className="flex justify-between items-start font-bold text-slate-900">
-                <span className="max-w-[85%]">{pub.title}</span>
-                <span className="text-xs font-mono text-slate-600 shrink-0">{pub.year}</span>
+              <div className="font-bold text-slate-900 leading-snug">
+                {pub.title}
               </div>
-              <div className="text-xs text-slate-700 italic flex items-center justify-between">
-                <span>{pub.journal}</span>
-                {pub.link && (
-                  <span className="text-[10px] text-sky-700 font-mono flex items-center print:hidden">
-                    <ExternalLink className="w-3 h-3 mr-0.5" />
-                    Link
-                  </span>
-                )}
+              <div className="text-xs text-slate-700 italic">
+                {pub.journal}, {pub.year}
               </div>
-              {pub.abstract && (
-                <p className="text-xs text-slate-600 text-justify leading-relaxed mt-1 pl-2 border-l border-slate-300 italic">
-                  {pub.abstract}
-                </p>
-              )}
             </div>
           ))}
         </div>
