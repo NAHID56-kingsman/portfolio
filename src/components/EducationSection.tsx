@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { education } from "../data";
-import { GraduationCap, Calendar, Award } from "lucide-react";
+import { GraduationCap, Calendar } from "lucide-react";
 
 export default function EducationSection() {
   return (
@@ -36,16 +36,10 @@ export default function EducationSection() {
                     {edu.degree}
                   </p>
                 </div>
-                <p className="text-text-secondary text-xs lg:text-sm leading-relaxed max-w-2xl transition-colors duration-300">
-                  {edu.info}
-                </p>
-                
-                {/* GPA Badge */}
-                {edu.gpa && (
-                  <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-teal-500/10 text-teal-400 rounded-xl border border-teal-500/20 text-xs font-mono">
-                    <Award className="w-3.5 h-3.5" />
-                    <span>{edu.gpa}</span>
-                  </div>
+                {edu.info && (
+                  <p className="text-text-secondary text-xs lg:text-sm leading-relaxed max-w-2xl transition-colors duration-300">
+                    {edu.info}
+                  </p>
                 )}
               </div>
 

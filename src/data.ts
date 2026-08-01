@@ -32,11 +32,11 @@ export interface SkillCategory {
 export const personalInfo = {
   name: "Nahid Asef",
   title: "AI & Full-Stack Developer",
-  subtitle: "Computer Science Student @ AUST",
+  subtitle: "Computer Science & Engineering Student @ AUST",
   location: "Dhaka, Bangladesh",
   email: "nahid20asef03@gmail.com",
   phone: "+880 1913-704843",
-  aboutMe: "Computer Science student with a strong passion for data analysis, alongside experience building deep learning models, computer vision systems, and full-stack AI applications using Python, PyTorch, FastAPI, and Docker.",
+  aboutMe: "Computer Science and Engineering student with a strong foundation in data analysis, machine learning, and software development. Skilled in Python, SQL, Excel, Power BI, and PyTorch, with hands-on experience developing deep learning models, computer vision systems, and AI-powered applications. Passionate about analyzing data and using insights to solve real-world problems.",
   profileImage: "/assets/img/profile.jpg",
   socials: {
     linkedin: "https://www.linkedin.com/in/nahid-asef-03/", // Generic placeholder or we can use his github since we don't have his exact linkedIn handle, or check his github URL. Let's provide a friendly fallback.
@@ -49,8 +49,8 @@ export const personalInfo = {
 export const education: EducationItem[] = [
   {
     institution: "Ahsanullah University of Science and Technology (AUST)",
-    degree: "Bachelor of Science (BSc)",
-    info: "Computer Science and Engineering",
+    degree: "Bachelor of Science (BSc) in Computer Science and Engineering",
+    info: "",
     period: "Expected Graduation: 2026",
     gpa: "3.24 / 4.00"
   }
@@ -75,8 +75,6 @@ export const skillsData: SkillCategory[] = [
     skills: [
       "TensorFlow",
       "PyTorch",
-      "Hugging Face",
-      "DistilBERT",
       "Scikit-learn",
       "OpenCV",
       "Computer Vision",
@@ -89,7 +87,7 @@ export const skillsData: SkillCategory[] = [
   },
   {
     category: "Data Analytics",
-    skills: ["Pandas", "NumPy", "Matplotlib", "Power BI", "MySQL", "PostgreSQL"]
+    skills: ["Pandas", "NumPy", "Matplotlib", "Power BI", "MySQL", "PostgreSQL", "Microsoft Excel"]
   },
   {
     category: "Web Development",
@@ -101,7 +99,7 @@ export const skillsData: SkillCategory[] = [
   },
   {
     category: "Tools & Environments",
-    skills: ["Git", "GitHub", "Google Colab", "VS Code", "Weka", "LaTeX", "Jupyter Notebook"]
+    skills: ["Git", "GitHub", "Google Colab", "VS Code", "Weka", "LaTeX", "Jupyter Notebook", "Power BI"]
   }
 ];
 
