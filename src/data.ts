@@ -95,7 +95,7 @@ export const skillsData: SkillCategory[] = [
   },
   {
     category: "Backend & DevOps",
-    skills: ["FastAPI", "Streamlit", "Docker"]
+    skills: ["FastAPI", "Express", "Node.js", "Streamlit", "Docker"]
   },
   {
     category: "Tools & Environments",
@@ -104,6 +104,20 @@ export const skillsData: SkillCategory[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    title: "Nexus Brief – AI Strategy & Feasibility Intelligence Platform",
+    description: "An AI-powered technology strategy platform generating structured enterprise research briefs with 5-axis feasibility ratings, ROI cost projections, and implementation roadmaps using Gemini.",
+    bullets: [
+      "Built a full-stack AI strategy platform generating structured enterprise research briefs with 5-axis feasibility scores, 12-month ROI cost projections, and phased roadmaps using Gemini",
+      "Implemented structured JSON output schemas, optional Google Search grounding, and Cheerio-based web scraping for URL source ingestion guarded by SSRF security protection",
+      "Engineered a head-to-head comparison studio, saved report library with local persistence, PDF export, and automatic mock report fallback handling API quota limits",
+      "Developed the application with React 19, TypeScript, Vite, Tailwind CSS, Recharts, and an Express backend bundled with esbuild"
+    ],
+    tags: ["TypeScript", "React 19", "Express", "Node.js", "Gemini API", "Tailwind CSS", "Recharts"],
+    category: "ML/AI",
+    github: "https://github.com/NAHID56-kingsman/nexus-brief",
+    demo: "https://nexus-brief.onrender.com"
+  },
   {
     title: "ToxiScan – Transformer-Based Toxic Comment Classification",
     description: "An AI-powered content moderation system that automatically detects toxic, abusive, and threatening language in user comments across 6 toxicity categories, enabling real-time flagging without manual review.",
