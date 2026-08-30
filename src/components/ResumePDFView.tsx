@@ -1,8 +1,4 @@
-
 import { Mail, Phone, Github, Linkedin, MapPin, Printer, FileText } from "lucide-react";
-
-import { Mail, Phone, Github, MapPin, Printer, FileText } from "lucide-react";
-
 import { personalInfo, education, projects, publications, skillsData } from "../data";
 
 interface ResumePDFViewProps {
@@ -82,7 +78,6 @@ export default function ResumePDFView({ onClose }: ResumePDFViewProps) {
               <Github className="w-3.5 h-3.5 mr-1 text-slate-600 print:text-black" />
               <span>GitHub: NAHID56-kingsman</span>
             </a>
-
             {personalInfo.socials.linkedin && (
               <>
                 <span className="text-slate-300 print:text-slate-400 font-sans">•</span>
@@ -97,7 +92,6 @@ export default function ResumePDFView({ onClose }: ResumePDFViewProps) {
                 </a>
               </>
             )}
-
             <span className="text-slate-300 print:text-slate-400 font-sans">•</span>
             <span className="flex items-center">
               <MapPin className="w-3.5 h-3.5 mr-1 text-slate-600 print:text-black" />
@@ -115,44 +109,6 @@ export default function ResumePDFView({ onClose }: ResumePDFViewProps) {
             {personalInfo.aboutMe}
           </p>
         </div>
-
-        {/* EDUCATION */}
-        <div className="mt-6 space-y-3">
-          <h2 className="text-sm font-bold tracking-wider text-slate-900 uppercase border-b border-slate-300 pb-1 font-sans">
-            Education
-          </h2>
-          {education.map((edu, idx) => (
-            <div key={idx} className="space-y-1">
-              <div className="flex justify-between items-start">
-                <span className="font-bold text-slate-900">{edu.institution}</span>
-                <span className="text-xs font-mono text-slate-600">{edu.period}</span>
-              </div>
-              <div className="flex justify-between items-start text-xs text-slate-700">
-                <span className="italic">{edu.degree}</span>
-                <span className="text-slate-600">Dhaka, Bangladesh</span>
-              </div>
-              <ul className="list-disc list-inside text-xs text-slate-700 pl-1 mt-1">
-                <li><span className="font-semibold text-slate-900">CGPA: 3.24 / 4.00</span></li>
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* SKILLS */}
-        <div className="mt-6 space-y-2.5">
-          <h2 className="text-sm font-bold tracking-wider text-slate-900 uppercase border-b border-slate-300 pb-1 font-sans">
-            Skills
-          </h2>
-          <div className="space-y-1.5 text-xs text-slate-700">
-            {skillsData.map((skillGroup, idx) => (
-              <div key={idx} className="grid grid-cols-[160px_1fr] gap-2">
-                <span className="font-bold text-slate-900">{skillGroup.category}:</span>
-                <span className="text-slate-700">{skillGroup.skills.join(", ")}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
 
         {/* PROJECTS */}
         <div className="mt-6 space-y-4">
