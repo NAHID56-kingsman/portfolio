@@ -39,7 +39,11 @@ export const personalInfo = {
   aboutMe: "Computer Science and Engineering student with a strong foundation in data analysis, machine learning, and software development. Skilled in Python, SQL, Excel, Power BI, and PyTorch, with hands-on experience developing deep learning models, computer vision systems, and AI-powered applications. Passionate about analyzing data and using insights to solve real-world problems.",
   profileImage: "/assets/img/profile.jpg",
   socials: {
+<<<<<<< HEAD
     linkedin: "https://www.linkedin.com/in/nahid-asef-5a2548253",
+=======
+    linkedin: "https://www.linkedin.com/in/nahid-asef-03/", // Generic placeholder or we can use his github since we don't have his exact linkedIn handle, or check his github URL. Let's provide a friendly fallback.
+>>>>>>> 7090355428d2cc84e7299724d83f3b59612f5146
     github: "https://github.com/NAHID56-kingsman",
     scholar: "",
     twitter: ""
@@ -49,9 +53,16 @@ export const personalInfo = {
 export const education: EducationItem[] = [
   {
     institution: "Ahsanullah University of Science and Technology (AUST)",
+<<<<<<< HEAD
     degree: "Bachelor of Science (BSc)",
     info: "",
     period: "Expected Graduation: 2026"
+=======
+    degree: "Bachelor of Science (BSc) in Computer Science and Engineering",
+    info: "",
+    period: "Expected Graduation: 2026",
+    gpa: "3.24 / 4.00"
+>>>>>>> 7090355428d2cc84e7299724d83f3b59612f5146
   }
 ];
 
@@ -94,16 +105,24 @@ export const skillsData: SkillCategory[] = [
   },
   {
     category: "Backend & DevOps",
+<<<<<<< HEAD
     skills: ["FastAPI", "Streamlit", "Docker"]
   },
   {
     category: "Tools",
+=======
+    skills: ["FastAPI", "Express", "Node.js", "Streamlit", "Docker"]
+  },
+  {
+    category: "Tools & Environments",
+>>>>>>> 7090355428d2cc84e7299724d83f3b59612f5146
     skills: ["Git", "GitHub", "Google Colab", "VS Code", "Weka", "LaTeX", "Jupyter Notebook", "Power BI"]
   }
 ];
 
 export const projects: Project[] = [
   {
+<<<<<<< HEAD
     title: "Hikmah AI – Multilingual Retrieval-Augmented Generation (RAG) Engine",
     description: "Built a retrieval-augmented generation (RAG) pipeline that grounds LLM outputs against a structured 6,236-document multilingual corpus (Arabic/English/Bangla), constraining generation to retrieved source text to reduce hallucination.",
     bullets: [
@@ -115,6 +134,20 @@ export const projects: Project[] = [
     tags: ["Node.js", "Express", "Google Gemini API", "Groq API (Llama 3.3/3.1)", "React"],
     category: "ML/AI",
     demo: "https://hikmah-ai-6vum.onrender.com"
+=======
+    title: "Nexus Brief – AI Strategy & Feasibility Intelligence Platform",
+    description: "An AI-powered technology strategy platform generating structured enterprise research briefs with 5-axis feasibility ratings, ROI cost projections, and implementation roadmaps using Gemini.",
+    bullets: [
+      "Built a full-stack AI strategy platform generating structured enterprise research briefs with 5-axis feasibility scores, 12-month ROI cost projections, and phased roadmaps using Gemini",
+      "Implemented structured JSON output schemas, optional Google Search grounding, and Cheerio-based web scraping for URL source ingestion guarded by SSRF security protection",
+      "Engineered a head-to-head comparison studio, saved report library with local persistence, PDF export, and automatic mock report fallback handling API quota limits",
+      "Developed the application with React 19, TypeScript, Vite, Tailwind CSS, Recharts, and an Express backend bundled with esbuild"
+    ],
+    tags: ["TypeScript", "React 19", "Express", "Node.js", "Gemini API", "Tailwind CSS", "Recharts"],
+    category: "ML/AI",
+    github: "https://github.com/NAHID56-kingsman/nexus-brief",
+    demo: "https://nexus-brief.onrender.com"
+>>>>>>> 7090355428d2cc84e7299724d83f3b59612f5146
   },
   {
     title: "ToxiScan – Transformer-Based Toxic Comment Classification",
@@ -131,6 +164,7 @@ export const projects: Project[] = [
     demo: "https://toxiscann.netlify.app/"
   },
   {
+<<<<<<< HEAD
     title: "Nexus Brief – LLM-Powered AI Strategy & Feasibility Intelligence Platform",
     description: "Built a full-stack LLM-powered research platform that converts raw AI/tech trends into structured enterprise strategy briefs via a Node/Express backend orchestrating Gemini.",
     bullets: [
@@ -145,6 +179,8 @@ export const projects: Project[] = [
     demo: "https://nexus-brief.onrender.com"
   },
   {
+=======
+>>>>>>> 7090355428d2cc84e7299724d83f3b59612f5146
     title: "ClinIntel AI – Hybrid Clinical Decision Support for Readmission Prediction",
     description: "An end-to-end clinical support system predicting 30-day hospital readmission risk from patient encounter data and extracting clinical entities from unstructured notes.",
     bullets: [
