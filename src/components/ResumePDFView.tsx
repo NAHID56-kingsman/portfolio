@@ -183,7 +183,6 @@ export default function ResumePDFView({ onClose }: ResumePDFViewProps) {
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* EDUCATION */}
         <div className="mt-6 space-y-3">
           <h2 className="text-sm font-bold tracking-wider text-slate-900 uppercase border-b border-slate-300 pb-1 font-sans">
